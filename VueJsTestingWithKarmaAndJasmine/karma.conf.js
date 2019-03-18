@@ -1,9 +1,12 @@
 // https://github.com/Nikku/karma-browserify
 module.exports = function (config) {
 	config.set({
-		browsers: ['Chrome', 'Edge', 'Firefox', 'IE'],
+		browsers: ['Chrome', 'Edge', 'Firefox'],
 		frameworks: ['browserify', 'jasmine'],
-		files: ['test/unit/**/*.js'],
+		files: [
+			// 'node_modules/@babel/polyfill/dist/polyfill.js',
+			'test/unit/**/*.js'
+		],
 		reporters: ['spec'],
 		preprocessors: {
 			'test/unit/**/*.js': ['browserify']

@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <hello></hello>
+    <increase-font-size :fontSize="fontSize"></increase-font-size>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello.vue'
+import IncreaseFontSize from './components/IncreaseFontSize.vue'
 
 export default {
   name: 'app',
+  data: function(){
+    return {
+      fontSize:60
+    };
+  },
   components: {
-    Hello
+    IncreaseFontSize
   }
 }
 </script>
+<style>
+  #app {
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+</style>

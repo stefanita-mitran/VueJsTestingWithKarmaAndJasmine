@@ -1,13 +1,16 @@
-import sumOfTwoNumbers from '../../src/Utils.js'
+function sumOfThreeNumbers(firstNumber, secondNumber, thirdNumber) {
+	return firstNumber + secondNumber + thirdNumber;
+}
 
-describe('Utils should', function(){
-    it('sum of 1 and 2 should return 3', function(){
-        var numbers = [1, 2];
+describe('Sum should', function(){
+	it('return 6 given 1, 2, 3 as inputs', function(){
+		// Arrange
+		var numbers = [1, 2, 3];
 
-        // Act
-        var actualResult = sumOfTwoNumbers(...numbers);
+		// Act
+		var actualResult = sumOfThreeNumbers(numbers[0], numbers[1], numbers[2]);
 
-        // Assert
-        expect(actualResult).toEqual(3);
-    });
+		// Assert
+		expect(actualResult).toEqual(6);
+	});
 });

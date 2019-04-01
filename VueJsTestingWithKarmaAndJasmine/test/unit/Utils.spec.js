@@ -8,7 +8,7 @@ describe('Sum should', function(){
 		var numbers = [1, 2, 3];
 
 		// Act
-		var actualResult = sumOfThreeNumbers(numbers[0], numbers[1], numbers[2]);
+		var actualResult = sumOfThreeNumbers(...numbers);
 
 		// Assert
 		expect(actualResult).toEqual(6);

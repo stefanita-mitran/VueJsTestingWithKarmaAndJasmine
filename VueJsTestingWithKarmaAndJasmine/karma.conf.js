@@ -1,10 +1,11 @@
 // https://github.com/Nikku/karma-browserify
 module.exports = function (config) {
 	config.set({
-		browsers: ['Chrome', 'Edge', 'Firefox'],
+		browsers: ['Chrome', 'Firefox', 'IE'],
 		frameworks: ['browserify', 'jasmine'],
 		files: [
 			// 'node_modules/@babel/polyfill/dist/polyfill.js',
+			// 'test/unit/Utils.spec.js'
 			'test/unit/**/*.js'
 		],
 		reporters: ['spec'],
